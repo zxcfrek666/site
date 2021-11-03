@@ -1,0 +1,21 @@
+const Router = require('express')
+const router = new Router()
+const deviceRouter = require('./deviceRouter')
+const userRouter = require('./userRouter')
+const brandRouter = require('./brandRouter')
+const typeRouter = require('./typeRouter')
+const materialRouter = require('./materialRouter')
+const madeCountryRouter = require('./madeCountryRouter')
+const productClassRouter = require('./productClassRouter')
+const colorRouter = require('./colorRouter')
+
+router.use('/user', userRouter)
+router.use('/type', typeRouter)
+router.use('/brand', brandRouter)
+router.use('/device', deviceRouter)
+router.use('/material', materialRouter)
+router.use('/madeCountry', madeCountryRouter)
+router.use('/productClass', productClassRouter)
+router.use('/color', colorRouter)
+
+module.exports = router
